@@ -1,5 +1,5 @@
 <?php
-class Downloader
+class CurlDownloader
 {
 	public static function downloadAndSave($url, $savepath)
 	{   
@@ -20,7 +20,6 @@ class Downloader
 		curl_close($ch);
 		fclose($fp);
 
-		// エラー発生
 		if (!$data)
 		{   
 			return false;
